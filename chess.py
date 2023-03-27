@@ -153,21 +153,27 @@ class Piece:
         self.pos = (-1, -1)
 
     # The methods are self explanatory:
+    # This function returns information about the chess piece's coordinate, subsection, and position.
     def getInfo(self):
         return [self.chess_coord, self.subsection, self.pos]
 
+    # This function sets the position of the chess piece.
     def setpos(self, pos):
         self.pos = pos
 
+    # This function returns the position of the chess piece.
     def getpos(self):
         return self.pos
 
+    # This function sets the chess piece's coordinate.
     def setcoord(self, coord):
         self.chess_coord = coord
 
+    # This function returns the string representation of the chess piece instance.
     def __repr__(self):
         # useful for debugging
         return f"{self.pieceinfo}({self.chess_coord[0]},{self.chess_coord[1]})"
+
 
 
 
