@@ -29,59 +29,47 @@ class GamePosition:
         # these keys represents the number of times each of these positions was repeated in order for this
         # position to be reached.
 
+    # Returns the current state of the board.
     def getboard(self):
-        """
-        Returns the current board with information on piece positions.
-        """
         return self.board
 
+    # Sets the state of the board to the value provided.
     def setboard(self, board):
-        """
-        Sets the current board with the given board configuration.
-        """
         self.board = board
 
+    # Returns the player who is currently making a move.
     def getplayer(self):
-        """
-        Returns the side to play at this moment.
-        """
         return self.player
 
+    # Sets the current player to the given value.
     def setplayer(self, player):
-        """
-        Set the player with the current side that is ready to play.
-        """
         self.player = player
 
+    # Returns the available castle rights for the current player.
     def getCastleRights(self):
-        """
-        Returns a list containing possible castling rights for both white and black players.
-        """
         return self.castling
 
+    # Sets the available castle rights for the current player.
     def setCastleRights(self, castling_rights):
-        """
-        Sets the list containing the castling rights.
-        """
         self.castling = castling_rights
 
+    # Returns the target square for an en passant capture.
     def getEnP(self):
-        """
-        Returns the target position in the case of "en passant" capture.
-        """
         return self.EnP
 
+    # Sets the target square for an en passant capture.
     def setEnP(self, EnP_Target):
-        """
-        Set the target position in the case of "en passant" capture.
-        """
         self.EnP = EnP_Target
 
+
+    # This is a class method to get the value of HMC
     def getHMC(self):
         return self.HMC
 
+    # This is a class method to set the value of HMC
     def setHMC(self, HMC):
         self.HMC = HMC
+
 
     def checkRepition(self):
         # Returns True if any of of the values in the history dictionary is greater than 3.
